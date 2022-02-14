@@ -511,14 +511,11 @@ module.exports = function (webpackEnv) {
                   sourceMap: isEnvProduction
                     ? shouldUseSourceMap
                     : isEnvDevelopment,
-                  modules: {
-                    mode: 'icss',
-                  }
                 }).concat({
                     loader: require.resolve('sass-loader'),
                     options:{
                       sassOptions:{
-                        includePaths: [paths.appSrc + '/styles']
+                        includePaths: [paths.appSrc + '/styles'],
                       },
                     }
                   }),
